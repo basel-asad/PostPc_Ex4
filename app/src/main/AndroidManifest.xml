@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="exercise.find.roots">
 
     <application
@@ -10,9 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.FindRoots">
+        <activity android:name=".ResultActivity"></activity>
+
         <service
             android:name=".CalculateRootsService"
-            android:exported="false"></service>
+            android:exported="false" />
 
         <activity android:name=".MainActivity">
             <intent-filter>
@@ -21,9 +22,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-<!--        TODO create a new class extending Activity and register it here in an <activity> tag -->
-
+        <!-- maybe add  CalculateRootsService    (basel) -->
+<!--        <service-->
+<!--            android:name=".CalculateRootsService"-->
+<!--            android:exported="false" />-->
     </application>
 
 </manifest>
